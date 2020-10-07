@@ -29,6 +29,11 @@ module fourbit_FA_str_tb;
 	reg Cin;
 	reg clk;
 	
+	wire Cout_verify;
+	wire [3:0] Sum_verify;
+	wire error_flag;
+
+	
 	// Instantiate the Unit Under Test (UUT)
 	fourbit_FA_str fourbit_FA (
 		.Cout(Cout), 
@@ -39,6 +44,19 @@ module fourbit_FA_str_tb;
 		.B(B),
 		.Cin(Cin)
 	);
+	
+	// Verification module
+	fourbit_verification Verification (
+		.Cout(Cout_verify), 
+		.S(Sum_verify), 
+		.A(A), 
+		.B(B), 
+		.Cin(Cin)
+	);
+	
+	// Assign Error_flag
+	assign error_flag = (Cout != Cout_verify || S[0] != Sum_verify[0]|| S[1] != Sum_verify[1]|| S[2] != Sum_verify[2]|| S[3] != Sum_verify[3]);
+	
 	
 	always #10 clk = ~clk;
 
