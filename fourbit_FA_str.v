@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fourbit_FA_str(S, Cout, A, B, Cin);
+module fourbit_FA_str(Cout, S[3:0], A[3:0], B[3:0], Cin);
 
 input [3:0] A, B;
 input Cin;

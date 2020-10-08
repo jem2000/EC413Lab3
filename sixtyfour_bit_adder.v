@@ -22,16 +22,16 @@
 
 module sixtyfour_bit_adder(S, Cout, A, B, Cin); 
 
-    input [3:0] A, B;
+    input [63:0] A, B;
     input Cin;
-    output [3:0] S;
+    output [63:0] S;
     output Cout;
     
     wire w1, w2, w3;
     
-    sixteen_bit_adder      FA1     (w1, S[0], A[0], B[0], Cin);
-    sixteen_bit_adder      FA2     (w2, S[1], A[1], B[1], w1);
-    sixteen_bit_adder      FA3     (w3, S[2], A[2], B[2], w2);
-    sixteen_bit_adder      FA4     (Cout, S[3], A[3], B[3], w3); 
+    sixteen_bit_adder      FA1     (w1, S[15:0], A[15:0], B[15:0], Cin);
+    sixteen_bit_adder      FA2     (w2, S[31:16], A[31:16], B[31:16], w1);
+    sixteen_bit_adder      FA3     (w3, S[47:32], A[47:32], B[47:32], w2);
+    sixteen_bit_adder      FA4     (Cout, S[63:48], A[63:48], B[63:48], w3); 
     
 endmodule

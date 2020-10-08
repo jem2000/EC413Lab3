@@ -20,18 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sixteen_bit_adder(S, Cout, A, B, Cin);
+module sixteen_bit_adder(Cout, S, A, B, Cin);
     
-    input [3:0] A, B;
+    input [15:0] A, B;
     input Cin;
-    output [3:0] S;
+    output [15:0] S;
     output Cout;
 
     wire w1, w2, w3;
 
-    fourbit_FA_str      FA1     (w1, S[0], A[0], B[0], Cin);
-    fourbit_FA_str      FA2     (w2, S[1], A[1], B[1], w1);
-    fourbit_FA_str      FA3     (w3, S[2], A[2], B[2], w2);
-    fourbit_FA_str      FA4     (Cout, S[3], A[3], B[3], w3); 
+    fourbit_FA_str      FA1     (w1, S[3:0], A[3:0], B[3:0], Cin);
+    fourbit_FA_str      FA2     (w2, S[7:4], A[7:4], B[7:4], w1);
+    fourbit_FA_str      FA3     (w3, S[11:8], A[11:8], B[11:8], w2);
+    fourbit_FA_str      FA4     (Cout, S[15:12], A[15:12], B[15:12], w3); 
     
 endmodule

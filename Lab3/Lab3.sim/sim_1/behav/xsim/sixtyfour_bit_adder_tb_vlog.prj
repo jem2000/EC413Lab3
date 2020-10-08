@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../AND_T.v" \
+"../../../../../FA_str.v" \
+"../../../../../OR_T.v" \
+"../../../../../fourbit_FA_str.v" \
+"../../../../../sixteen_bit_adder.v" \
+"../../../../../sixtyfour_bit_adder.v" \
+"../../../../../sixtyfour_verification.v" \
+"../../../../../sixtyfour_bit_adder_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

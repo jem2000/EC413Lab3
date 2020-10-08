@@ -1,0 +1,16 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/justi/Documents/GitHub/EC413Lab3/AND_T.v,1602024281,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/FA_str.v,,AND_T,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/FA_str.v,1602024281,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/OR_T.v,,FA_str,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/Lab3/Lab3.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/Lab3/Lab3.srcs/sim_1/new/sixteen_bit_adder_tb.v,1602136330,verilog,,,,sixteen_bit_adder_tb,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/OR_T.v,1602024281,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/fourbit_FA_str.v,,OR_T,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/fourbit_FA_str.v,1602198876,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/sixteen_bit_adder.v,,fourbit_FA_str,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/fourbit_FA_str_tb.v,1602029081,verilog,,,,fourbit_FA_str_tb,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/fourbit_verification.v,1602198419,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/sixteen_bit_adder.v,,fourbit_verification,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/sixteen_bit_adder.v,1602199258,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/sixtyfour_bit_adder.v,,sixteen_bit_adder,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/sixtyfour_bit_adder.v,1602199412,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/sixtyfour_verification.v,,sixtyfour_bit_adder,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/sixtyfour_bit_adder_tb.v,1602134540,verilog,,,,sixtyfour_bit_adder_tb,,,,,,,,
+C:/Users/justi/Documents/GitHub/EC413Lab3/sixtyfour_verification.v,1602133733,verilog,,C:/Users/justi/Documents/GitHub/EC413Lab3/sixtyfour_bit_adder_tb.v,,sixtyfour_verification,,,,,,,,
