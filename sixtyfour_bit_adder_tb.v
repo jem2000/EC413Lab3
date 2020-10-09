@@ -22,8 +22,8 @@
 
 module sixtyfour_bit_adder_tb; 
 	
-	wire Cout;
-	wire [63:0] S;
+	wire Cout,Coutselect; 
+	wire [63:0] S,Carryselectsum;
 	// Inputs
 	reg  [63:0] A, B;
 	reg Cin;
@@ -32,7 +32,6 @@ module sixtyfour_bit_adder_tb;
 	wire Cout_verify;
 	wire [63:0] Sum_verify;
 	wire error_flag;
-
 	
 	// Instantiate the Unit Under Test (UUT)
 	sixtyfour_bit_adder sixtyfourFA (
@@ -43,6 +42,17 @@ module sixtyfour_bit_adder_tb;
 		.A(A),
 		.B(B),
 		.Cin(Cin)
+	);
+	
+		// Instantiate the Unit Under Test (UUT)
+	twostage_carryselect_adder carryselectFA ( 
+	    .Cout(Coutselect), 
+		.S(Carryselectsum), 
+        //.A(A[0]), .A(A[1]), .A(A[2]), .A(A[3]), 
+		//.B(B[0]), .B(B[1]), .B(B[2]), .B(B[3]),  
+		.A(A),
+		.B(B),
+		.Cin(Cin)  
 	);
 	
 	// Verification module
@@ -57,8 +67,9 @@ module sixtyfour_bit_adder_tb;
 	// Assign Error_flag
 	assign error_flag = (Cout != Cout_verify || S[0] != Sum_verify[0]|| S[1] != Sum_verify[1]|| S[2] != Sum_verify[2]|| S[3] != Sum_verify[3]);
 	
-	
-	always #10 clk = ~clk;
+	assign error_flag_twostage = (Coutselect != Cout_verify || Carryselectsum[0] != Sum_verify[0]|| Carryselectsum[1] != Sum_verify[1]|| Carryselectsum[2] != Sum_verify[2]|| Carryselectsum[3] != Sum_verify[3]);	
+
+	always #10 clk = ~clk; 
 
 	initial begin
 		// Initialize Inputs
