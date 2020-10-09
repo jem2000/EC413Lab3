@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//We designed this 16 bit adder for the 64 bit adder. In this adder, we instantiated four 4 bit adders. 
 
 module sixteen_bit_adder(Cout, S, A, B, Cin);
     

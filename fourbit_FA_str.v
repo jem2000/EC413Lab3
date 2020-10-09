@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//We designed this 4 bit adder using four 1 bit adders that were given by instantiating them 4 times. 
 
 module fourbit_FA_str(Cout, S[3:0], A[3:0], B[3:0], Cin);
 

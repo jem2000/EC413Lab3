@@ -19,6 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//We designed a 2 Stage Carry Select Adder by instantiating 32 bit adders 3 times. Then we made 2 MUXes to 
+//make a Cout for the 2 Stage Carry Select Adder and the other was for the output. 
 
 module twostage_carryselect_adder(Cin,A,B,S,Cout); 
 

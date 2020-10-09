@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//We designed this 32 bit adder by instantiating the 16 bit adder 2 times. 
 
 module thirtytwo_bitadder(S, Cout, A, B, Cin); 
 

@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//Testbench for 64 bit RCA and 64 bit 2 Stage Carry Selector Adder 
 
 module sixtyfour_bit_adder_tb; 
 	

@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//We designed this 64 bit adder by instantiating four 16 bit adders. 
 
 module sixtyfour_bit_adder(S, Cout, A, B, Cin); 
 
